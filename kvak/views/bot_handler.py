@@ -7,7 +7,7 @@ def bot_handler(request):
 
     requests.get('https://b24-tmfi1y.bitrix24.ru/rest/1/p12anzljw63jx12z/im.notify/?to=1&message=' + message)
 
-    return HttpResponse('it works')
+    return HttpResponse('it works 2')
 
     resp = requests.get(
         "https://bing-image-search1.p.rapidapi.com/images/search?q=жаба",
