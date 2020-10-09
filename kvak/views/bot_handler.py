@@ -6,9 +6,9 @@ import json
 def bot_handler(request):
     message = json.dumps(request.POST)
 
-    requests.get('https://b24-tmfi1y.bitrix24.ru/rest/1/p12anzljw63jx12z/im.notify/?to=1&message=' + message)
+    print('https://b24-tmfi1y.bitrix24.ru/rest/1/p12anzljw63jx12z/im.notify/?to=1&message=' + message)
 
-    return HttpResponse('it works 2')
+    return HttpResponse('success')
 
     resp = requests.get(
         "https://bing-image-search1.p.rapidapi.com/images/search?q=жаба",
