@@ -15,12 +15,14 @@ def bot_handler(request):
             "x-rapidapi-key": "fb3dd38f00msh738d9f9b25b29acp13d692jsn8859445253e3",
             "useQueryString": 'true'
         }
-    ).json()
+    )
     # resp['value'][12]['contentUrl']
 
     print(resp.text)
 
     return HttpResponse('success')
+
+    resp = resp.json()
 
     file_link = ''
 
