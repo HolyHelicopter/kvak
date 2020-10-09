@@ -15,14 +15,18 @@ def bot_handler(request):
             "x-rapidapi-key": "fb3dd38f00msh738d9f9b25b29acp13d692jsn8859445253e3",
             "useQueryString": 'true'
         }
-    )
+    ).json()
     # resp['value'][12]['contentUrl']
 
-    print(resp.text)
+    requests.post(
+        'https://api.telegram.org/bot1221959365:AAHAZKkaa5hJF0bchJFfVM9uT9Hhv-jOfzg/sendMessage',
+        {
+            'chat_id': '811288345',
+            'text': 'this is a message'
+        }
+    )
 
     return HttpResponse('success')
-
-    resp = resp.json()
 
     file_link = ''
 
