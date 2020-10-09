@@ -1,9 +1,10 @@
 from django.http import HttpResponse
-import requests, json
+import requests
+import json
 
 
 def bot_handler(request):
-    message = json.loads(request.body.decode())
+    message = json.dumps(request.POST)
 
     requests.get('https://b24-tmfi1y.bitrix24.ru/rest/1/p12anzljw63jx12z/im.notify/?to=1&message=' + message)
 
