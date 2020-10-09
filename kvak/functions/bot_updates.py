@@ -26,6 +26,7 @@ def bot_updates(updates):
         for update in updates:
             if 'message' in update:
                 message = update['message']
+                chat_id = message['chat']['id']
                 if 'text' in message and message['text']:
                     message_text = message['text']
 
@@ -68,7 +69,7 @@ def bot_updates(updates):
                                 requests.post(
                                     TG_URL + 'sendPhoto',
                                     {
-                                        'chat_id': '811288345',
+                                        'chat_id': chat_id,
                                         'photo': image_url
                                     }
                                 )
@@ -80,7 +81,7 @@ def bot_updates(updates):
                                     requests.post(
                                         TG_URL + 'sendPhoto',
                                         {
-                                            'chat_id': '811288345',
+                                            'chat_id': chat_id,
                                             'photo': image_url
                                         }
                                     )
