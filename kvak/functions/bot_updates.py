@@ -37,7 +37,7 @@ def bot_updates(updates):
 
                         words_temp = []
                         for word in words:
-                            if 'квак' not in word:
+                            if 'квак' not in word.replace('К', 'к').replace('В', 'в').replace('А', 'а'):
                                 words_temp.append(word)
                         words = words_temp
 
